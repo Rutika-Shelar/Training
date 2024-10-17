@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+</head>
+<body>
+            <!-- Forms -->
+            <!-- Forms are used to take input from users -->
+    <fbutton>
+
+            <!-- Text Input -->
+            <h1>Text input</h1>
+
+        <!--label is used to show  -->
+        <lable for="fname">First Name</lable><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname" >Last Name</label><br>
+        <input type="lname" id="lname" name="lname"><br><hr>
+        
+            <!-- Radio Button -->
+            <h1>Radio buttons</h1>
+            <!-- Radio buttons let a user select only one of a limited number of choices<br> -->
+
+        <input type="radio" id="html"name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css"name="fav_language" value="CSS">
+        <label for="html">CSS</label><br>
+        <input type="radio" id="javascript"name="fav_language" value="JAVASCRIPIT">
+        <label for="html">JAVASCRIPT</label><br><hr>
+
+            <!-- Check Box-->
+            <!-- it let the user to select ZERO or More options of Limited number of Choices -->
+           
+        <h1>Check Box</h1>
+        <input type="checkbox" id="subject1" name="subject" value="Cloud Computing">
+        <label for="subject1">Cloud Computing</label><br>
+        <input type="checkbox" id="subject2" name="subject" value="Artificial Intelligence">
+        <label for="subject2">Artificial Intelligence1</label><br>
+        <input type="checkbox" id="subject3" name="subject" value="Blockchain">
+        <label for="subject3">Blockchain</label><br>
+
+            <h1>Submit Button</h1>
+            <!-- The <input type="submit"> defines a submit button which submits all form values to a form-handler.
+            The form-handler is typically a server page with a script for processing the input data.
+            The form-handler is specified in the form's action attribute. -->
+
+        <input type="submit" value="Submit" >
+        <input type="reset" value="Reset" > <br><br> <!-- To reset the form -->
+       
+            <!-- HTML FORM ELEMENTS -->
+            <!--
+                <input>
+                <label>
+                <select>
+                <textarea>
+                <button>
+                <field>
+                <legend>
+                <datalist>
+                <option>
+                <optgroup>  -->
+                
+            <h2>Select</h2>
+            <!-- <select> is used for drop down list -->
+        <select name="state" id="select">
+            <option >select</option>
+            <option value="MH">Mharastra</option>
+            <option value="UP">Uttar Pradesh</option>
+            <option value="MP">Madhya Pradesh</option>
+        </select>
+       <br><br>
+            <!-- button -->
+        <button onclick="alert('Form submitted')">Click ME!</button>
+            <fieldset>
+                <legend>Personalia:</legend>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" value="Rutika"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="fname" value="Shelar"><br><br>
+                    <input type="submit" value="Submit" >
+            </fieldset><br>
+          <label for="browsers">Browsers</label>  
+        <input list="browsers" >
+        <datalist id="browsers">
+            <option value="Edge"></option>
+            <option value="FireFox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">              
+        </datalist>
+    </form><br>
+    <input type="color">
+    
+</body>
+</html>
