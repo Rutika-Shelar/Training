@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Theory</title>
+</head>
+<body>
+        <form action="/action_page.php" >
+            <label for="fname">First name:</label><br>
+
+            <!-- The readonly attribute can be set to keep a user from changing the 
+            value until some other conditions have been met (like selecting a checkbox, etc.).
+            Then, a JavaScript can remove the readonly value, and make the input field editable. -->
+
+            <input type="text" id="fname" name="fname" value="John" readonly><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe" readonly><br><br>
+            <input type="submit" value="Submit"><br><br>
+
+            <!-- disabled attribute is used to disable the input fields. -->
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John" disabled ><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"  ><br><br>
+            
+            <!-- required attribute is used to specify that the input field must be filled out before submitting the form. -->
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <input type="submit">
+            <br><br>
+
+            <!-- size attribute is used to specify the width of an input field. -->
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="pin">Pin:</label><br>
+            <input type="text" id="pin" name="pin" size="4"><br><br>
+            <!-- maxlenght attribute is used to specify the maximum number of characters allowed in the input field. -->
+            <!-- minlegth attribute is used to specify the minimum number of characters allowed in the input field. -->
+
+            <label for="number">number</label><br>            
+            <input type="text" id="Phon" name="pin" maxlength="10" minlength="10" size="4" ><br><br>
+
+            <!-- min and max attribute is used to specify the minimum and maximum values for an input field. -->
+            <label for="datemax">Enter a date brfore 1980-01-01:</label>
+            <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+            <label for="datemin">Enter a date after 2000-01-01:</label>
+            <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+            <label for="quantity">Quantity (between 1 and 5):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+        </form>
+            <!-- autocomplete attribute is used to specify whether or not an input field should have autocomplete enabled. -->
+            <!-- autocomplete="off" - The browser will not automatically complete the input value. -->
+           <form acction="/action_page.php" autocomplete="on">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" autocomplete="off"><br><br>
+            <input type="submit">
+       
+            <!-- autofocus attribute is used to specify that an input field should automatically get focus when the page loads. -->
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" autofocus><br>
+
+            
+            <label for="doc">Document:</label><br>
+            <!-- accept=".pdf" - The file input field will only accept files with the .pdf extension. -->
+            <input type="file" id="doc" accept=".pdf, .png" name="filename"><br><br>
+        </form>
+
+               
+
+             
+            
+
+            
+        
+</body>
+</html>
+
