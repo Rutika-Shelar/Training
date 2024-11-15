@@ -1,0 +1,113 @@
+p{
+  font-size: 21px;
+  color: rgb(5, 5, 49);
+  text-align:center;
+}
+
+h1{
+  /* pro/offset-x| offset-y| blur-radius|color */
+       text-shadow: 2px 2px 5px red;
+   
+}
+
+.a{
+  font-size: 21px;
+  color: rgb(5, 5, 49);
+  text-align:left;
+  /* for capitalize first letter of each word */
+  text-transform: capitalize;
+  /* for indenting the first line of the paragraph like newspaper texts*/
+  text-indent: 70px;
+    /* space between 2 lines */
+  line-height: 70px;
+  /* space between words */
+  word-spacing: 8px;
+}
+
+
+.b{
+  font-size: 21px;
+  color: rgb(5, 5, 49);
+  text-align:right;
+  /* for uppercase whole content */
+  text-transform: uppercase;
+  /* for space between letters */
+  letter-spacing: 5px;
+}
+
+.c{
+  font-size: 21px;
+  color: rgb(5, 5, 49);
+  text-align:justify;
+  /* for lowercase whole content */
+  text-transform: lowercase;
+  /* for space between letters  negative also */
+  letter-spacing: -5px;
+}
+
+
+#dotted{
+  
+    outline-style: dotted ;
+    outline-color: crimson;
+    background-color: lightpink;
+     text-align: left;
+    
+}
+#dashed{
+   
+    outline-style: dashed;
+    outline-color: crimson;
+    background-color: lightpink;
+    text-align: center;
+}
+
+#solid{
+    outline-style: solid;
+    outline-color: crimson;
+    background-color: lightpink;
+    text-align: right;
+}
+
+#double{
+    outline-style: double;
+    outline-color: crimson;
+    background-color: lightpink;
+    text-align: justify;
+}
+
+#groove{
+    outline-style: groove;
+    outline-color: crimson;
+    background-color: lightpink;
+}
+
+#ridge{
+     outline-style: ridge;
+    outline-color: crimson;
+    background-color: lightpink;
+}
+
+#inset{
+     outline-style: inset;
+    outline-color: crimson;
+    background-color: lightpink;
+}
+
+#outset{
+      outline-style: outset;
+    outline-color: crimson;
+    background-color: lightpink;
+}
+
+
+ul{
+  list-style-type:circle;list-style-position: inside;
+
+
+}
+ol{
+  list-style-type: square;
+  list-style-position: outside;
+
+}

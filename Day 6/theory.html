@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+
+<body class="bg-[url('images/map.webp')]  bg-center">
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex shrink-0 items-center">
+            <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+              alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                aria-current="page">Dashboard</a>
+              <a href="#"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+              <a href="#"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+              <a href="#"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button"
+                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="">
+              </button>
+            </div>
+
+            <!--
+            Dropdown menu, show/hide based on menu state.
+
+            Entering: "transition ease-out duration-100"
+              From: "transform opacity-0 scale-95"
+              To: "transform opacity-100 scale-100"
+            Leaving: "transition ease-in duration-75"
+              From: "transform opacity-100 scale-100"
+              To: "transform opacity-0 scale-95"
+          -->
+            <div
+              class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <!-- Active: "bg-gray-100 outline-none", Not Active: "" -->
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                id="user-menu-item-0">Your Profile</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                id="user-menu-item-1">Settings</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                id="user-menu-item-2">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+          aria-current="page">Dashboard</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+        <a href="#"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+      </div>
+    </div>
+  </nav>
+  <!-- colors -->
+  <p class="text-green-50">tailwindcss</p>
+  <p class="text-green-100">tailwindcss</p>
+  <p class="text-green-200">tailwindcss</p>
+  <p class="text-green-300">tailwindcss</p>
+  <p class="text-green-400">tailwindcss</p>
+  <p class="text-green-500">tailwindcss</p>
+  <p class="text-green-600">tailwindcss</p>
+  <p class="text-green-700">tailwindcss</p>
+  <p class="text-green-800">tailwindcss</p>
+  <p class="text-green-900">tailwindcss</p>
+  <!-- background colr -->
+  <p class="bg-red-800 text-white hover:bg-pink-700">css</p>
+  <p class="bg-red-700 text-white">tailwindcss</p>
+  <p class="bg-red-600 text-white">tailwindcss</p>
+  <p class="bg-red-500 text-white">tailwindcss</p>
+  <p class="bg-pink-400 text-white">tailwindcss</p>
+  <p class="bg-pink-300 text-white">tailwindcss</p>
+  <!-- Text decoration -->
+  <p class="underline">tailwindcss</p>
+  <p class="underline decoration-red-600">tailwindcss</p>
+  <p class="line-through">tailwindcss</p>
+  <p class="no-underline">tailwindcss</p>
+  <!-- Text transform -->
+  <p class="uppercase">tailwindcss</p>
+  <p class="lowercase">tailwindcss</p>
+  <p class="capitalize">tailwindcss</p>
+  <p class="normal-case">tailwindcss</p>
+
+  <!-- accent color -->
+  <h1>Arbitary Colors</h1>
+  <input type="checkbox" />
+  <input type="checkbox" class="text-red-600" />
+  <input type="checkbox" class="text-black-500" />
+
+  <!-- CHECKBOX COLOR IN HEXCODE -->
+  <input type="checkbox" class="text-#ff0000" />
+  <input type="checkbox" class="text-#000000" />
+  <!-- margin -->
+  <div class="m-4 bg-red-500">margin all</div>
+  <div class="mx-4 bg-red-600">margin for x axis</div>
+  <div class="my-4 bg-red-800">margin for y axis</div>
+  <div class="mt-4 bg-red-300">margin top</div>
+  <div class="mb-4 bg-red-900">margin bottom</div>
+  <div class="ml-4 bg-red-700">margin left</div>
+  <div class="mr-4 bg-red-500">margin right</div>
+
+
+
+  <!-- arbitary spacing -->
+  <div class="m-[200px] bg-red-500">tailwindcss</div>
+  <div class="mx-[200px] bg-red-600">tailwindcss</div>
+  <div class="my-[200px] bg-red-800">tailwindcss</div>
+  <br>
+  <!-- padding -->
+  <div class="p-4 bg-red-500">padding all</div>
+  <div class="px-4 bg-red-600">padding for x axis</div>
+  <div class="py-4 bg-red-800">padding for y axis</div>
+  <div class="pt-4 bg-red-300">padding top</div>
+  <div class="pb-4 bg-red-900">padding bottom</div>
+  <div class="pl-4 bg-red-700">padding left</div>
+  <div class="pr-4 bg-red-500">padding right</div>
+  <br>
+  <!-- arbitary padding -->
+  <div class="p-[200px] bg-red-500">tailwindcss</div>
+  <div class="px-[200px] bg-red-600">tailwindcss</div>
+  <div class="py-[200px] bg-red-800">tailwindcss</div>
+
+  <!-- spacing Between -->
+  <div class="space-x-4">
+    <button class="bg-red-500">Button 1</button>
+    <button class="bg-red-600">Button 2</button>
+    <button class="bg-red-700">Button 3</button>
+  </div>
+  <!-- Font size -->
+  <p class="text-xs">tailwind</p>
+  <p class="text-sm">tailwind</p>
+  <p class="text-base">tailwind</p>
+  <p class="text-lg">tailwind</p>
+  <p class="text-xl">tailwind</p>
+  <p class="text-2xl">tailwind</p>
+  <p class="text-3xl">tailwind</p>
+  <!-- arbitary font size -->
+  <p class="text-[20px]">tailwind</p>
+  <!-- font family -->
+  <p class="font-sans">tailwind</p>
+  <p class="font-serif">tailwind</p>
+  <p class="font-mono">tailwind</p>
+
+  <!-- font weight -->
+   <h1 class="text-black-800 bg-green-500  "> Font weight</h1>
+  <p class="font-light ">tailwind ...</p>
+  <p class="font-normal ">tailwind </p>
+  <p class="font-medium ">tailwind </p>
+  <p class="font-semibold ">tailwind </p>
+  <p class="font-bold ">tailwind </p>
+  <p class="font-extrabold ">tailwind </p>
+  <p class="font-black ">tailwind </p>
+
+  <br>
+  <div class="bg-green-400">
+<!-- letter Spacing -->
+<h1 class="text-black-800 bg-green-500  "> Letter Spacing</h1>
+  <p class="tracking-tighter">tracking-tighter </p>
+  <p class="tracking-tight"> tracking tight</p>
+</div>
+<br>
+  <div class="bg-green-400">
+<!-- Text allignment -->
+  <h1 class="text-black-800 bg-green-500 "> Text allignment</h1>
+  <p class="text-left">alligment left</p>
+  <p class="text-right">alligment right</p>
+  <p class="text-center">alligment center</p>
+  <p class="text-justify">alligment justify</p>
+  <p class="text-start">alligment start</p>
+  <p class="text-end">alligment end</p>
+</div><br>
+<!-- decoration style -->
+<div class="bg-green-300">
+  
+  <p class="underline decoration-solid ">decoration solid</p>
+  <p class="underline decoration-double ">decoration double</p>
+  <p class="underline decoration-dotted ">decoration dotted</p>
+  <p class="underline decoration-dashed ">decoration dashed</p>
+  <p class="underline decoration-wavy ">decoration wavy</p>
+  <!-- decoration color -->
+</div>
+<br>
+<div class="bg-green-200">
+  <h1>Decoration offset</h1>
+
+  <p class="underline-offset-auto">decoration offset</p>
+  <p class="underline-offset-2">decoration offset</p>
+  <p class="underline-offset-4">decoration offset</p>
+  <p class="underline-offset-8">decoration offset</p>
+</div>
+<br>
+<!-- Text Transform -->
+<div class="bg-green-100">
+  <h1 class="bg-grey-1000">Text Transform</h1>
+  <p class="uppercase">text transform</p>
+  <p class="lowercase">text transform</p>
+  <p class="capitalize">text transform</p>
+  <p class="normal-case">text transform</p>
+</div>
+
+<!-- Sizing -->
+<div class="bg-green-100">
+  <h1 class="bg-pink-1000">Sizing</h1>
+  <div class="w-0 bg-amber-400">w-96</div>
+  <div class="w-px bg-amber-500">w-1/2</div>
+  <div class="w-0.5 bg-amber-600">w-1/3</div>
+  <div class="w-3 bg-amber-200">w-1/24</div>
+  <div class="w-96 bg-amber-200">w-96</div>
+           <!-- percentage width -->
+  <div class="w-1/2 bg-amber-300">w-1/2</div>
+  <div class="w-1/3 bg-amber-400">w-1/3</div>
+  <div class="w-1/4 bg-amber-500">w-1/4</div>
+  <div class="w-1/5 bg-amber-600">w-1/5</div>
+  <div class="w-1/6 bg-amber-700">w-1/6</div>
+  <div class="w-1/12 bg-amber-800">w-1/12</div>
+  <div class="w-full bg-amber-900">w-full</div>
+  <div class="w-screen bg-amber-100">w-screen</div>
+  <div class="w-min bg-amber-200">w-min</div>
+  <div class="w-max bg-amber-300">w-max</div>
+  <div class="w-[200px] bg-amber-400">w-[200px]</div>
+  <div class="w-[50%] bg-amber-500">w-[50%]</div>
+</div>
+ <!-- max width -->
+ <div class="bg-green-300">
+  <div class="w-full max-w-0 bg-red-300 ">max-w-96</div>
+  <div class="w-full max-w-px bg-red-300 ">max-w-80</div>
+  <div class="w-full max-w-1 bg-red-300 ">max-w-64</div>
+  <div class="w-full max-w-48 bg-red-300 ">max-w-48</div>
+  <div class="w-full max-w-40 bg-red-300 ">max-w-40</div>
+  <div class="w-full max-w-32 bg-red-300 ">max-w-32</div>
+  <div class="w-full max-w-24 bg-red-300 ">max-w-24</div>
+</div><br>
+
+<!-- max Height -->
+  <div class="p-30 h-96 m-15 bg-green-300 flex">
+    <div class="h-full max-h-70 bg-red-300">max-h-40</div>
+      <div class="h-full max-h-40 bg-red-300">max-h-30</div>
+      <div class="h-full max-h-80 bg-red-300">max-h-80</div>
+
+  </div>
+  <!-- position -->
+  <h1 class="mb-3">Position</h1>
+  <div class="relative w-1/2 h-40 bg-green-200">
+    <p>Relative</p>
+    <div class="absolute bottom-0 right-0 bg-teal-500 p-4">
+      <p>Absolute</p>
+    </div>
+  </div>
+
+  <div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+    <p>Relative</p>
+    <div class="absolute left-0 top-0 h-16 w-16 bg-teal-500">
+      <p>Absolute</p>
+    </div>
+  </div>
+
+  <div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+    <p>Relative</p>
+    <div class="absolute right-0 top-0 h-16 w-16 bg-teal-500">
+      <p>Absolute</p>
+    </div>
+  </div>
+
+  <div class="relative w-1/2 h-40 bg-green-200 mt-5 mb-5">
+    <p>Relative</p>
+    <div class="absolute bottom-0 h-16 w-16 bg-teal-500">
+      <p>Absolute</p>
+    </div>
+  </div>
+
+
+  <div class="relative">
+    <div class="fixed top-0 left-10right-0">Contacts</div>
+    <div><br>
+      <div class="inline-block">
+        <img class ="sticky top-5 rounded-full size-16 "src="images/profile.jpg"  />
+        <strong>Andrew Alfred</strong>
+      </div><br>
+      <div class="inline-block">
+        <img class ="relative rounded-full size-16 "src="images/profile.jpg" />
+        <strong>Debra Houston</strong>
+      </div><br>
+      <div class="absolute">
+        <img class="rounded-full  absolute size-16 " src="images/profile.jpg" />
+        <strong>John Doe</strong>
+    </div>
+    
+  </div>
+
+  
+</body>
+
+</html>
