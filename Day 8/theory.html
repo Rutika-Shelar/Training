@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- border width and colors -->
+    <div class="border border-red-500 border-4">
+        <h1 class="text-4xl">Hello World</h1>
+    </div>
+    <!-- border radius -->
+    <div class="border border-red-500 border-4 rounded-lg">
+        <h1 class="text-4xl">Hello World</h1>
+    </div>
+    <!-- border radius -->
+    <div class="border border-red-500 border-4 rounded-full">
+        <h1 class="text-4xl">Hello World</h1>
+    </div>
+    <!-- contrast -->
+    <div class="border m-10 flex p-10">
+        <img class="w-[250px] h-[250px] brightness-50"
+        src="https://plus.unsplash.com/premium_photo-1672234253746-99ac19181f0b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww" alt="nature">
+        
+
+        <img class="w-[250px] h-[250px] contrast-100"
+        src="https://plus.unsplash.com/premium_photo-1672234253746-99ac19181f0b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww" alt="nature">
+       
+
+        <img class="w-[250px] h-[250px] brightness-200"
+        src="https://plus.unsplash.com/premium_photo-1672234253746-99ac19181f0b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww" alt="nature">
+
+        <img class="w-[250px] h-[250px] brightness-300"
+        src="https://plus.unsplash.com/premium_photo-1672234253746-99ac19181f0b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww" alt="nature">
+        
+    </div>
+        <!-- grayscale -->
+         <h1>   Grayscale</h1>
+    <div class="bg-gray-200 filter grayscale-0">
+        <img class="w-[250px] h-[250px] grayscale-0"
+        src="https://plus.unsplash.com/premium_photo-1672234253746-99ac19181f0b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww" alt="nature">
+       
+        <img class="w-[250px] h-[250px] grayscale"
+        src="https://plus.unsplash.com/premium_photo-1672234253746-99ac19181f0b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww" alt="nature">
+    </div>
+
+        <!-- hue color -->
+         <h1>Heu rotate</h1>
+        <img class="w-[250px] h-[250px] hue-rotate-90"
+        src="https://plus.unsplash.com/premium_photo-1672234253746-99ac19181f0b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww" alt="nature">
+      <!-- saturate -->
+        <h1>Saturate</h1>
+            <img class="w-[250px] h-[250px] saturate-200"
+            src="https://plus.unsplash.com/premium_photo-1672234253746-99ac19181f0b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww" alt="nature">
+    <!-- blur -->
+     <h1>Blur</h1>
+    <img class="w-[250px] h-[250px] blur-0"
+    src="https://plus.unsplash.com/premium_photo-1672234253746-99ac19181f0b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww" alt="nature">
+
+    <div class="border m-10">
+        <div class="flex w-100">
+          <!-- flex-none  It prevents item from growing and shrinking -->
+          <div class="p-5 m-3 w-64 bg-teal-100 flex-none">01</div>
+          <!-- Allow items to shrink but not grow, taking its initial size -->
+          <div class="p-5 m-3 w-64 bg-teal-100 flex-initial">02</div>
+          <!-- Allow item to grow and shrink as needed ignoring its initial size -->
+          <div class="p-5 m-3 w-64 bg-teal-100 flex-auto">03</div>
+          <div class="p-5 m-3 w-64 bg-teal-100 flex-1">04</div>
+          <div class="p-5 m-3 w-64 bg-teal-100 ">05</div>
+          <div class="p-5 m-3 w-64 bg-teal-100 ">06</div>
+          <div class="p-5 m-3 w-64 bg-teal-100 ">07</div>
+          <div class="w-100 grid grid-cols-3 grid-rows-4 gap-4 ">
+            <div class="p-10 bg-teal-200">01</div>
+            <div class="p-10 bg-teal-200">02</div>
+            <div class="p-10 bg-teal-200">03</div>
+            <div class="p-10 bg-teal-200">04</div>
+            <div class="p-10 bg-teal-200">05</div>
+            <div class="p-10 bg-teal-200">06</div>
+            <div class="p-10 bg-teal-200">07</div>
+            <div class="p-10 bg-teal-200">08</div>
+            <div class="p-10 bg-teal-200">09</div>
+            <div class="p-10 bg-teal-200">10</div>
+            <div class="p-10 bg-teal-200">11</div>
+            <div class="p-10 bg-teal-200">12</div>
+          </div>
+      <br>
+      
+      <h1>Col and Row Span</h1>
+          <div class="w-100 grid grid-cols-3 grid-rows-4 gap-4 ">
+            <div class="p-10 bg-teal-200 col-span-2 row-span-2">01</div>
+            <div class="p-10 bg-teal-200">02</div>
+            <div class="p-10 bg-teal-200">03</div>
+            <div class="p-10 bg-teal-200 col-span-2">04</div>
+            <div class="p-10 bg-teal-200">05</div>
+            <div class="p-10 bg-teal-200">06</div>
+            <div class="p-10 bg-teal-200">07</div>
+            <div class="p-10 bg-teal-200">08</div>
+                  <div class="p-10 bg-teal-200 col-span-3">09</div>
+            <div class="p-10 bg-teal-200">10</div>
+            <div class="p-10 bg-teal-200">11</div>
+            <div class="p-10 bg-teal-200">12</div>
+          </div>
+      
+           <!-- No Transition -->
+<button class="p-5 text-white bg-blue-500 hover:bg-blue-700">Click me</button>
+
+<button class="ml-5 p-5 bg-blue-500 transition hover:bg-teal-500 ease-in-out delay-150 text-white">With transition</button>
+
+<!-- Transition & Transform -->
+<button class="ml-5 p-5 bg-blue-500 transition hover:bg-teal-500 ease-in-out delay-150 duration-1000 text-white hover:translate-y-1 hover:scale-110 rotate-45 ">Transformation</button>
+<br>
+<!-- Animation -->
+ <div class="flex justiy-center">
+  <div class="p-20 ml-20 mt-20 w-20 bg-teal-200 animate-spin">Spin</div>
+  <div class="p-20 ml-20 mt-20 w-20 bg-teal-200 animate-ping">Ping</div>
+  <div class="p-20 ml-20 mt-20 w-20 bg-teal-200 animate-pulse">Pulse</div>
+  <div class="p-20 ml-20 mt-20 w-20 bg-teal-200 animate-bounce">Bounce</div>
+
+ </div>
+</body>
+
+</html>
